@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 51 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 51 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 0 0% 0%;
+    --radius: 0rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-neo-yellow text-neo-black font-body antialiased;
+  }
+  
+  ::selection {
+    @apply bg-neo-black text-neo-yellow;
+  }
+}
+
+@layer components {
+  /* Neo-brutalist card styles */
+  .neo-card {
+    @apply bg-white border-4 border-neo-black shadow-neo transition-all duration-200;
+  }
+  
+  .neo-card:hover {
+    @apply shadow-neo-hover translate-x-[2px] translate-y-[2px];
+  }
+  
+  .neo-card-green {
+    @apply bg-neo-green border-4 border-neo-black shadow-neo transition-all duration-200;
+  }
+  
+  .neo-card-green:hover {
+    @apply shadow-neo-hover translate-x-[2px] translate-y-[2px];
+  }
+  
+  .neo-card-pink {
+    @apply bg-neo-pink border-4 border-neo-black shadow-neo transition-all duration-200;
+  }
+  
+  .neo-card-pink:hover {
+    @apply shadow-neo-hover translate-x-[2px] translate-y-[2px];
+  }
+  
+  .neo-card-black {
+    @apply bg-neo-black border-4 border-neo-black text-white shadow-neo transition-all duration-200;
+  }
+  
+  .neo-card-black:hover {
+    @apply shadow-neo-hover translate-x-[2px] translate-y-[2px];
+  }
+  
+  .neo-card-blue {
+    @apply bg-neo-blue border-4 border-neo-black text-white shadow-neo transition-all duration-200;
+  }
+  
+  .neo-card-blue:hover {
+    @apply shadow-neo-hover translate-x-[2px] translate-y-[2px];
+  }
+  
+  .neo-card-yellow {
+    @apply bg-neo-yellow border-4 border-neo-black shadow-neo transition-all duration-200;
+  }
+  
+  .neo-card-yellow:hover {
+    @apply shadow-neo-hover translate-x-[2px] translate-y-[2px];
+  }
+  
+  /* Neo-brutalist button */
+  .neo-btn {
+    @apply bg-white border-4 border-neo-black px-6 py-3 font-mono font-bold text-sm uppercase tracking-wider shadow-neo transition-all duration-200;
+  }
+  
+  .neo-btn:hover {
+    @apply bg-neo-black text-white shadow-neo-hover translate-x-[2px] translate-y-[2px];
+  }
+  
+  .neo-btn-black {
+    @apply bg-neo-black border-4 border-neo-black text-white px-6 py-3 font-mono font-bold text-sm uppercase tracking-wider shadow-neo transition-all duration-200;
+  }
+  
+  .neo-btn-black:hover {
+    @apply bg-white text-neo-black shadow-neo-hover translate-x-[2px] translate-y-[2px];
+  }
+  
+  /* Section styling */
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-20;
+  }
+  
+  /* Thick border utility */
+  .border-thick {
+    @apply border-4 border-neo-black;
+  }
+  
+  /* Ticker/Marquee container */
+  .ticker-container {
+    @apply bg-neo-black text-neo-yellow overflow-hidden whitespace-nowrap;
+  }
+  
+  /* Terminal text effect */
+  .terminal-text {
+    @apply font-mono text-sm;
+  }
+  
+  /* Glitch effect */
+  .glitch {
+    position: relative;
+  }
+  
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .glitch::before {
+    left: 2px;
+    text-shadow: -1px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+  }
+  
+  .glitch::after {
+    left: -2px;
+    text-shadow: -1px 0 #00fff9;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+  }
+  
+  @keyframes glitch-anim {
+    0% { clip: rect(31px, 9999px, 94px, 0); }
+    20% { clip: rect(78px, 9999px, 20px, 0); }
+    40% { clip: rect(12px, 9999px, 6px, 0); }
+    60% { clip: rect(65px, 9999px, 89px, 0); }
+    80% { clip: rect(43px, 9999px, 12px, 0); }
+    100% { clip: rect(91px, 9999px, 54px, 0); }
+  }
+  
+  @keyframes glitch-anim2 {
+    0% { clip: rect(65px, 9999px, 99px, 0); }
+    20% { clip: rect(12px, 9999px, 43px, 0); }
+    40% { clip: rect(78px, 9999px, 12px, 0); }
+    60% { clip: rect(31px, 9999px, 65px, 0); }
+    80% { clip: rect(91px, 9999px, 78px, 0); }
+    100% { clip: rect(43px, 9999px, 31px, 0); }
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFD700;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border: 3px solid #FFD700;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
