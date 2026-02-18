@@ -74,6 +74,12 @@ const Hero = () => {
           className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-black text-white tracking-tighter mb-4"
         >
           LOGESHWARAN
+          
+        </h1>
+        <h1
+          ref={nameRef}
+          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-black text-white tracking-tighter mb-4"
+        >
           ( jesper )
           
         </h1>
