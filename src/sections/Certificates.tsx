@@ -10,8 +10,8 @@ const certificates = [
     title: 'Applied Accelerated Artificial Intelligence',
     institution: 'Indian Institute of Technology, Palakkad',
     platform: 'NPTEL',
-    date: 'October 2023',
-    link: 'https://nptel.ac.in',
+    date: 'October 2022',
+    link: 'https://drive.google.com/file/d/1CwO-MvZGkNR5C6K47v-68pOTT4D2ybuJ/view?usp=sharing',
     color: 'neo-card-green',
   },
   {
@@ -19,8 +19,16 @@ const certificates = [
     institution: 'Indian Institute of Technology, Madras',
     platform: 'NPTEL',
     date: 'October 2024',
-    link: 'https://nptel.ac.in',
+    link: 'https://drive.google.com/file/d/1rvZzqfFc9g2n359KnsK2OtI5zGK3_DgR/view?usp=sharing',
     color: 'neo-card-yellow',
+  },
+  {
+    title: 'The Joy of Computing using Python',
+    institution: 'Indian Institute of Technology, Madras',
+    platform: 'NPTEL',
+    date: 'October 2024',
+    link: 'https://drive.google.com/file/d/1nSCQIHNOefWBYyUOrLS_v2Bjca28Tuz7/view?usp=sharing',
+    color: 'neo-card-pink',
   },
 ];
 
@@ -77,6 +85,8 @@ const Certificates = () => {
 
   const getCardClass = (color: string) => {
     const classes: Record<string, string> = {
+      'neo-card-pink': 'bg-neo-pink border-4 border-neo-black shadow-neo hover:shadow-neo-hover hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-200',
+      'neo-card-blue': 'bg-neo-blue border-4 border-neo-black shadow-neo hover:shadow-neo-hover hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-200',
       'neo-card-green': 'bg-neo-green border-4 border-neo-black shadow-neo hover:shadow-neo-hover hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-200',
       'neo-card-yellow': 'bg-neo-yellow border-4 border-neo-black shadow-neo hover:shadow-neo-hover hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-200',
     };
@@ -153,10 +163,6 @@ const Certificates = () => {
         </div>
       </div>
 
-      {/* Decorative elements */}
-      <div className="absolute bottom-10 left-10 hidden lg:block">
-        <div className="w-16 h-16 border-4 border-neo-black bg-neo-pink -rotate-12" />
-      </div>
     </section>
   );
 };

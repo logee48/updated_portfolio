@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ExternalLink, Github, Cpu, Gamepad2, MessageSquare, ChevronLeft, ChevronRight, Hand } from 'lucide-react';
+import { ExternalLink, Github, Cpu, Gamepad2, MessageSquare, ChevronLeft, ChevronRight, Hand, Facebook } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,7 +9,7 @@ const projects = [
   {
     title: 'Indian Bail Prediction System',
     subtitle: 'Machine Learning & FastAPI',
-    description: 'Built a machine learning based bail prediction system using Python, FastAPI, and Random Forest, achieving 73% accuracy. Designed a feature engineering pipeline using IPC sections, crime categories, and legal factors to model bail decisions.',
+    description: 'Built a machine learning based bail prediction system using Python, FastAPI, and Random Forest, achieving 73% accuracy.',
     tech: ['Python', 'FastAPI', 'Random Forest'],
     icon: Cpu,
     github: 'https://github.com/logee48/bail-prediction-system',
@@ -17,24 +17,34 @@ const projects = [
     color: 'neo-card-blue',
   },
   {
+    title: 'Whatsapp Ecommerce',
+    subtitle: 'Meta API & Node.js',
+    description: 'Built a WhatsApp eCommerce bot using Meta API and Razorpay for in-chat ordering and secure prepaid/COD payment methods for orders.',
+    tech: ['Python', 'FastAPI', 'Random Forest'],
+    icon: Facebook,
+    github: 'https://github.com/logee48/whatsapp_ecommerce_system',
+    live: 'https://wa.me/917906769090?text=hi',
+    color: 'neo-card-pink',
+  },
+  {
     title: 'VH-ken',
     subtitle: 'Hand Gesture Recognition Game',
-    description: 'Developed a game utilising hand gesture recognition technology powered by TensorFlow and MediaPipe in Python, allowing users to control their game characters with precise movements. Increased user interaction with the game by 80%.',
+    description: 'Developed a gesture-controlled game using TensorFlow and MediaPipe in Python, enabling precise character control.',
     tech: ['Python', 'C#', 'Unity', 'Firebase', 'TensorFlow'],
     icon: Gamepad2,
     github: 'https://github.com/logee48/vh_ken',
     live: null,
-    color: 'neo-card-pink',
+    color: 'neo-card-green',
   },
   {
     title: 'HastyCom',
     subtitle: 'Real-time Chat Application',
-    description: 'Created a web application for students to collaborate and communicate during laboratory exam sessions, resulting in 100% student engagement. Focuses on quick communication, allowing users to create a chat room in a fraction of a second.',
+    description: 'Created a collaborative web app for lab exams with real-time chat rooms and instant messaging, achieving 100% student engagement.',
     tech: ['HTML', 'JavaScript', 'CSS', 'Firebase'],
     icon: MessageSquare,
     github: 'https://github.com/logee48/hasty-com',
     live: 'https://logee48.github.io/hasty-com',
-    color: 'neo-card-green',
+    color: 'neo-card-blue',
   },
 ];
 

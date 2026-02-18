@@ -136,10 +136,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="mt-12 pt-8 border-t-2 border-neo-gray w-full text-center">
               <p className="font-mono text-sm text-gray-500">
-                © 2025 Logesh. ALL RIGHTS RESERVED.
-              </p>
-              <p className="font-mono text-xs text-gray-600 mt-2">
-                BUILT WITH REACT + TAILWIND + GSAP
+                © 2025 Logeshwaran Elumalai. ALL RIGHTS RESERVED.
               </p>
             </div>
           </div>

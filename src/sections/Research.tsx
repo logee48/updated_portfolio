@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { FileText, Users, BookOpen } from 'lucide-react';
+import { FileText, Users, BookOpen, ExternalLink} from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,22 +96,44 @@ const Research = () => {
               </div>
             </div>
 
+            
             <div className="flex flex-wrap gap-4 pt-6 border-t-2 border-neo-black">
-              <div className="bg-neo-yellow border-4 border-neo-black px-4 py-2">
-                <span className="font-mono text-xs font-bold uppercase tracking-wider">
+
+              {/* Conference */}
+              <div className="bg-neo-yellow border-4 border-neo-black px-4 py-2" style={{padding:"12px"}}>
+                <span className="flex items-center justify-center font-mono text-xs font-bold uppercase tracking-wider">
                   IEEE Conference
                 </span>
               </div>
-              <div className="bg-neo-green border-4 border-neo-black px-4 py-2">
-                <span className="font-mono text-xs font-bold uppercase tracking-wider">
+
+              {/* Volume */}
+              <div className="bg-neo-green border-4 border-neo-black px-4 py-2" style={{padding:"12px"}}>
+                <span className="flex items-center justify-center font-mono text-xs font-bold uppercase tracking-wider">
                   Volume 2025, pp. 449-454
                 </span>
               </div>
-              <div className="bg-neo-blue text-white border-4 border-neo-black px-4 py-2">
-                <span className="font-mono text-xs font-bold uppercase tracking-wider">
+
+              {/* Publisher */}
+              <div className="bg-neo-blue text-white border-4 border-neo-black px-4 py-2" style={{padding:"12px"}}>
+                <span className="flex items-center justify-center font-mono text-xs font-bold uppercase tracking-wider">
                   Publisher: IEEE
                 </span>
               </div>
+
+              {/* Link */}
+              <a
+                href="https://ieeexplore.ieee.org/document/10962610"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <div className="bg-neo-yellow border-4 border-neo-black px-4 py-2" style={{padding:"12px"}}>
+                  <span className="flex items-center justify-center gap-2 font-mono text-xs font-bold uppercase tracking-wider">
+                    <ExternalLink className="w-4 h-4" />
+                    <span>Link</span>
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
