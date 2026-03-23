@@ -61,7 +61,7 @@ const Footer = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/src/resume.pdf';
+    link.href = '/resume.pdf';
     link.download = 'Logesh_Resume.pdf';
     document.body.appendChild(link);
     link.click();
